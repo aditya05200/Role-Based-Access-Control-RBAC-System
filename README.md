@@ -1,110 +1,85 @@
-# Role-Based-Access-Control-RBAC-System
-A comprehensive system for managing users and roles, implementing secure authentication and authorization using role-based access control. The project includes both backend and frontend components.
+# **Role-Based Access Control (RBAC) System**  
 
-Project Features
-User Registration and Login:
+This project implements a secure and efficient **Role-Based Access Control (RBAC) System**. It ensures that only authorized users with appropriate roles can access specific features and resources of the application. The system includes a backend API for managing roles and permissions and a user-friendly frontend interface.  
 
-Users can register with unique email IDs.
-Passwords are securely stored using hashing.
-Role Management:
+---
 
-Assign roles to users (e.g., Admin, User, Moderator).
-Role-based permissions for accessing specific resources.
-Token-Based Authentication:
+## **Table of Contents**  
 
-JWT for secure user authentication and session management.
-Refresh tokens for extending session durations.
-CRUD Operations:
+- [Features](#features)  
+- [Tech Stack](#tech-stack)  
+- [Architecture](#architecture)  
+- [Installation](#installation)  
+- [Usage](#usage)  
+- [API Endpoints](#api-endpoints)  
+- [Screenshots](#screenshots)  
+- [Contributing](#contributing)  
+- [License](#license)  
 
-Create, Read, Update, and Delete users.
-Manage roles and permissions.
-Frontend Features:
+---
 
-Responsive UI for user registration and login.
-Dashboard for managing user roles and permissions.
-Backend Features:
+## **Features**  
 
-Built with Spring Boot for robust and scalable performance.
-Secure APIs for all operations.
-Tech Stack
-Frontend:
-React.js
-Material-UI
-Axios for API calls
-Backend:
-Spring Boot
-JWT Authentication
-MySQL Database
-JPA/Hibernate
-Installation and Setup
-Prerequisites
-Install Node.js
-Install Java JDK
-Install MySQL
-Install Git
-Clone the Repository
-bash
-Copy code
-git clone https://github.com/aditya05200/Role-Based-Access-Control-RBAC-System.git
-cd Role-Based-Access-Control-RBAC-System
-Backend Setup
-Navigate to the backend directory:
-bash
-Copy code
-cd backend
-Configure the database in application.properties:
-properties
-Copy code
-spring.datasource.url=jdbc:mysql://localhost:3306/your_database_name
-spring.datasource.username=your_username
-spring.datasource.password=your_password
-Build and run the backend:
-bash
-Copy code
-mvn clean install
-mvn spring-boot:run
-The backend server will run at http://localhost:8080.
-Frontend Setup
-Navigate to the frontend directory:
-bash
-Copy code
-cd frontend
-Install dependencies:
-bash
-Copy code
-npm install
-Start the frontend development server:
-bash
-Copy code
-npm start
-The frontend will be accessible at http://localhost:3000.
-Usage
-Open the application in your browser.
-Register a new user or log in using existing credentials.
-Admin users can manage roles and permissions through the dashboard.
-Test role-based restrictions by assigning roles to users and attempting to access restricted areas.
-Folder Structure
-bash
-Copy code
-Role-Based-Access-Control-RBAC-System/
-│
-├── backend/        # Backend application with Spring Boot
-│   ├── src/        # Source code for APIs and services
-│   └── pom.xml     # Maven configuration file
-│
-├── frontend/       # Frontend application with React.js
-│   ├── src/        # React components and pages
-│   └── package.json
-│
-└── README.md       # Project documentation
-Endpoints
-Backend API
-HTTP Method	Endpoint	Description
-POST	/auth/register	Register a new user
-POST	/auth/login	Log in a user
-GET	/users	Fetch all users
-GET	/users/{id}	Fetch a user by ID
-PUT	/users/{id}	Update user details
-DELETE	/users/{id}	Delete a user
-License
-This project is licensed under the MIT License. See the LICENSE file for details.
+1. **Authentication & Authorization**  
+   - Token-based authentication using JWT.  
+   - Role-based access control for different user types (Admin, User, etc.).  
+
+2. **User Management**  
+   - Register new users.  
+   - Manage user roles and permissions.  
+
+3. **CRUD Operations**  
+   - Perform Create, Read, Update, Delete operations on users and roles.  
+
+4. **Token Management**  
+   - Access token with a 24-hour expiration.  
+   - Refresh token implementation.  
+
+5. **Responsive UI**  
+   - Interactive and responsive frontend built with React.  
+
+---
+
+## **Tech Stack**  
+
+### **Frontend**:  
+- **React**  
+- **CSS**  
+
+### **Backend**:  
+- **Java Spring Boot**  
+- **JWT (JSON Web Tokens)**  
+
+### **Database**:  
+- **MySQL**  
+
+### **Tools**:  
+- **Postman** (for API testing)  
+- **Git** (for version control)  
+- **Docker** (optional for deployment)  
+
+---
+
+## **Architecture**  
+
+The project follows a **three-layered architecture**:  
+1. **Controller Layer**: Handles incoming requests and routes them to the appropriate services.  
+2. **Service Layer**: Contains business logic and integrates with the repository layer.  
+3. **Repository Layer**: Interacts with the database for data persistence.  
+
+---
+
+## **Installation**  
+
+### **Prerequisites**  
+- Java 17 or higher  
+- Node.js and npm  
+- MySQL  
+- Git  
+
+### **Setup Instructions**  
+
+1. **Clone the Repository**  
+   ```bash
+   git clone https://github.com/aditya05200/Role-Based-Access-Control-RBAC-System.git
+   cd Role-Based-Access-Control-RBAC-System
